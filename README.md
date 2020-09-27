@@ -7,8 +7,10 @@ A program runs to extra the thumbnail and table of contents by mupdf and crontab
 ## Git clone and Download the mupdf and unzip the source from zip to 'source' folder
 ```
 wget https://mupdf.com/downloads/archive/mupdf-1.17.0-source.tar.gz
-unzip mupdf-1.17.0-source.tar.gz mupdf-1.17.0-source
+unzip mupdf-1.17.0-source.tar.gz
 mv mupdf-1.17.0-source source
+docker build . -t alpine-mupdf
+docker-compose --compatibility  up -d --force-recreate
 ```
 
 ## Convert shell
