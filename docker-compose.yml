@@ -1,0 +1,15 @@
+version: '3'
+services:
+    mupdf_app:
+        stdin_open: true
+        tty: true
+        container_name: mupdf_app
+        restart: always
+        volumes:
+            - './data:/opt/data' 
+        image: apline-mupdf
+        deploy:
+            resources:
+                limits:
+                    cpus: '0.5'
+                    memory: 512M
